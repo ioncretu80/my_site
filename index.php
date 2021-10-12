@@ -1,2 +1,2 @@
 <?php
-echo("mThis is my_site");
+echo("This is my_site");

@@ -6,6 +6,7 @@
     "scripts": {
         "post-update-project-cmd": [
             "php -r \"if(is_dir('public/bootstrap')){rmdir('public/bootstrap');}\"",
+            "php -r \"exec('mkdir public');\"",
             "php -r \"exec('mkdir public\\bootstrap');\"",
             "php -r \"exec('xcopy \/E \/I vendor\\twbs\\bootstrap\\dist  public\\bootstrap');\"",
             "php -r \"if(is_dir('public/jquery')){rmdir('public/jquery');}\"",

@@ -1,10 +1,11 @@
 {
     "require": {
-        "twbs/bootstrap": "5.1.3"
+        "twbs/bootstrap": "5.1.3",
+        "components/jquery": "^3.6"
     },
 
     "scripts": {
-        "post-update-project-cmd": [
+        "copy_in_public" : [
             "php -r \"if(is_dir('public/bootstrap')){rmdir('public/bootstrap');}\"",
             "php -r \"exec('mkdir public');\"",
             "php -r \"exec('mkdir public\\bootstrap');\"",
@@ -13,6 +14,10 @@
             "php -r \"exec('mkdir public\\jquery');\"",
             "php -r \"exec('xcopy \/E \/I vendor\\components\\jquery  public\\jquery');\""
 
+        ],
+        "post-update-project-cmd": [
+            "mkdir -p public/bootstrap",
+            "cp -r vendor/twbs/bootstrap/dist/* public/bootstrap/"
         ]
     }
 

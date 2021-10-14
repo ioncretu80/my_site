@@ -17,6 +17,7 @@
         ],
         "post-update-project-cmd": [
             "mkdir -p public/bootstrap",
+            "mkdir -p public/jquery",
             "cp -r vendor/twbs/bootstrap/dist/* public/bootstrap/",
             "cp -r vendor/components/jquery/* public/jquery/"
         ]
